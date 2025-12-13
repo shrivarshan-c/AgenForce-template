@@ -1,6 +1,7 @@
 
-
+"use client";
 import Image from "next/image"
+import{ motion} from "motion/react";
 
 const Logos = [
 
@@ -45,7 +46,7 @@ export const LogoBar = ()=>{
 
     return(
         <>
-        <div className="min-h-screen pt-10 max-w-7xl mx-auto">
+        <div className="pt-10 md:pt-20 lg:pt-32 max-w-7xl mx-auto">
 
             <div className="mx-auto max-w-xl text-center text-xl text-neutral-700">
             Trusted by modern operators across industries.
@@ -57,15 +58,36 @@ export const LogoBar = ()=>{
 
 
             <div className="logogrid  pt-10">
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-2 max-w-3xl mx-auto">
+                <motion.div className="grid grid-cols-2 md:grid-cols-3 gap-2 max-w-3xl mx-auto"
+                
+              
+
+                >
                     {Logos.map((logo,index)=>(
-                        <div className="logo-wrapper size-20 mx-auto" key={index}>
+                        <motion.div className="logo-wrapper size-20 mx-auto" key={index} 
+                        
+                        initial={{
+                            y:-10,
+                            opacity:0,
+                            filter:"blur(10px)"
+                        }}
+                        whileInView={{
+                            y:0,
+                            opacity:1,
+                            filter:"blur(0px)"
+                        }}
+                        transition={{
+                            duration:0.7,
+                            delay:index*0.1,
+                            ease:"easeOut"
+                        }}
+                        >
                             <Image src={logo.url} alt={logo.name} className="logo"
                             width={100}
                             height={100} />
-                        </div>
+                        </motion.div>
                     ))}
-                </div>
+                </motion.div>
             </div>
         </div>
 

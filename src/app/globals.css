@@ -56,6 +56,9 @@ body {
          -13px 9px 16px 0px rgba(0,0,0,0.25),
          -3px 2px 9px 0px rgba(0,0,0,0.29);
 
+         --pattern-fg: color-mix(in oklab, black 8%, transparent);
+
+
 
 
 
@@ -102,6 +105,8 @@ body {
     -29px 19px 21px 0px rgba(255,255,255,0.15),
     -13px 9px 16px 0px rgba(255,255,255,0.25), 
     -3px 2px 9px 0px rgba(255,255,255,0.29);
+
+    --pattern-fg: color-mix(in oklab, white 10%, transparent);
 } 
 
 
