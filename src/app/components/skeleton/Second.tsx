@@ -16,7 +16,7 @@ export const SecondSkeleton = () => {
       <div className="relative min-h-72 w-80 bg-neutral-200/20 p-2 flex flex-col border-2 border-neutral-300 rounded-2xl">
         <div className="flex gap-2">
           <IconCircleDashedCheck />
-          <p>Campagin Planner</p>
+          <p>Campaign Planner</p>
         </div>
         <div
           className=" relative group my-4 h-64
