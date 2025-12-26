@@ -3,12 +3,12 @@ import { DottedGlowBackground } from "@/components/ui/dotted-glow-background";
 export const ThirdSkeleton = () => {
   return (
     <div className="relative h-full w-full">
-      <div className="z-40  flex absolute inset-0 items-center justify-center">
+      <div className="z-40  flex absolute inset-0 mx-0 p-2 items-center justify-center">
         <SvgPath />
       </div>
 
       <DottedGlowBackground
-        className="pointer-events-none mask-radial-to-90% mask-radial-at-center "
+        className=" w-full pointer-events-none mask-radial-to-90% mask-radial-at-center "
         opacity={0.9}
         gap={10}
         radius={1.6}

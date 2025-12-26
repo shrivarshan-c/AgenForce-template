@@ -27,8 +27,6 @@ export const SecondFeatureSkeleton = ()=>{
             <IconCard/>
         
            
-           
-          
 
 
             </div>
@@ -98,6 +96,7 @@ export const IconCard = ()=>{
         </div>
     )
 }
+
 
 
 

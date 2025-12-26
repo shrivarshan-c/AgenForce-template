@@ -1,14 +1,15 @@
 import { SecondFeatureSkeleton } from "./skeleton/SecondFeatureSkeleton"
-
+import { cn } from "@/lib/utils"
 
 export const SecondFeatures = ()=>{
 
 
   return(
-    <div className="">
+    <div className="mt-8">
 
 
-    <div className="mx-auto max-w-7xl mt-24 p-8 min-h-screen flex items-center justify-center">
+    <div className="mx-auto max-w-7xl mt-8 md:mt-12 lg:mt-24 p-8 min-h-screen
+     grid grid-cols-1 lg:grid-cols-2 items-center justify-center">
 
 
 <div className="relative w-[90%] h-130 border-b border-t border-neutral-300 border-r px-8  flex flex-col gap-10">
@@ -162,7 +163,7 @@ style={{
 
       </div>
 
-<div className="mx-auto max-w-7xl w-full h-40 -mt-30 p-4 grid grid-cols-3 gap-2">
+<div className="mx-auto max-w-7xl w-full h-40 -mt-30 p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
 <SecondFeatureGridComponent>
 
   <div className="flex gap-2 items-center">
@@ -170,7 +171,7 @@ style={{
 
 <SecondFeatureSubHeading>Workflow Automation</SecondFeatureSubHeading>
 </div>
-<SecondFeaturePara>
+<SecondFeaturePara className="text-neutral-500">
 Automate campaigns, tickets and CRM updates without manual handoffs.
 </SecondFeaturePara>
   </SecondFeatureGridComponent>
@@ -181,7 +182,7 @@ Automate campaigns, tickets and CRM updates without manual handoffs.
 
 <SecondFeatureSubHeading>Integration Fabric</SecondFeatureSubHeading>
 </div>
-<SecondFeaturePara>
+<SecondFeaturePara className="text-neutral-500">
 Connect CRMs, service desks, data warehouses and cloud apps seamlessly.
 </SecondFeaturePara>
   </SecondFeatureGridComponent>
@@ -192,7 +193,7 @@ Connect CRMs, service desks, data warehouses and cloud apps seamlessly.
 
 <SecondFeatureSubHeading>Human-in-the-Loop</SecondFeatureSubHeading>
 </div>
-<SecondFeaturePara>
+<SecondFeaturePara className="text-neutral-500">
 Add reviews, approvals and escalations without slowing work.
 </SecondFeaturePara>
 </SecondFeatureGridComponent>
@@ -222,20 +223,20 @@ export const SecondFeatureHeading = ({children}:{children:React.ReactNode})=>{
 
 
 
-export const SecondFeatureSubHeading = ({children}:{children:React.ReactNode})=>{
+export const SecondFeatureSubHeading = ({children,className}:{children:React.ReactNode,className?:string})=>{
   return(
-    <div className="text-md text-neutral-800 font-bold font-manrope">
+    <div className={cn("text-md text-neutral-800 font-bold font-manrope",className)}>
 
     {children}
 
       </div>
   )
 }
-export const SecondFeaturePara = ({children}:{children:React.ReactNode})=>{
+export const SecondFeaturePara = ({children,className}:{children:React.ReactNode,className?:string})=>{
 
 
   return(
-    <div className="text-neutral-700 text-md font-inter max-w-md ">
+    <div className={cn("text-neutral-700 text-md font-inter max-w-md",className)}>
     {children}
     </div>
   )

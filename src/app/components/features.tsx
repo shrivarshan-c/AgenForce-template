@@ -8,29 +8,29 @@ import { Tags } from "./skeleton/first";
 import { Badge } from "./skeleton/first";
 import { ThirdSkeleton } from "./skeleton/Third";
 import { SecondSkeleton } from "./skeleton/Second";
-export const Features = ()=>{
+export const Features = ()=>{ 
 
     return(
-        <div className="min-h-screen pt-10 md:pt-20 lg:pt-32 mx-auto max-w-7xl">
+        <div className="min-h-screen pt-10 md:pt-20 lg:pt-32 mx-auto max-w-sm sm:max-w-md md:max-w-3xl lg:max-w-7xl">
 
-<div className="flex justify-between items-baseline-last">
+<div className="flex flex-col gap-2  md:flex-row  md:gap-0 justify-between items-baseline-last">
 
 
 
-<Heading as="h2" className="max-w-2xl font-bold">Built for Fast Moving<br></br>
+<Heading as="h2" className=" font-bold">Built for Fast Moving<br></br>
 Teams That Need Control.</Heading>
 <SubHeading as="p" className="font-medium tracking-tight max-w-lg"> Agents work inside your existing tools, with built-in approvals,<br></br>
  brand and policy guardrails, and full traceability. Every action is auditable, every outcome accountable.</SubHeading>
 </div>
 
-<div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-24">
+<div className="grid grid-cols-1 md:mx-auto md:grid-cols-2 lg:grid-cols-3  gap-4 mt-24">
 
 
         
-        <CardSection className="relative rounded-tl-4xl rounded-bl-4xl ">
+        <CardSection className="relative rounded-tl-4xl rounded-bl-4xl">
            
-            <CardStack >
-                <div className="relative w-full h-40 md:h-60 lg:h-80 perspective-distant translate-x-3 -translate-y-2 -translate-z-10 "
+            <CardStack  className="h-64 md:h-72 lg:h-96 flex items-center justify-center">
+                <div className="relative w-full h-40 md:h-60 lg:h-80 perspective-distant translate-x-0 translate-y-0 translate-z-0 lg:translate-x-3 lg:-translate-y-2 lg:-translate-z-10 "
                 style={{
                     transform:"rotateZ(22deg) rotateX(30deg) rotateY(-20deg) scale(1.2)"
                 }}>
@@ -108,7 +108,7 @@ Teams That Need Control.</Heading>
 
              
         <CardSection>
-        <CardStack className="relative">
+        <CardStack className="relative h-64 md:h-72 lg:h-96 flex items-center justify-center"> 
             <SecondSkeleton/>
         </CardStack>
 
@@ -127,7 +127,7 @@ Teams That Need Control.</Heading>
         </CardSection>
              
         <CardSection className="rounded-tr-4xl rounded-br-4xl">
-        <CardStack>
+        <CardStack className="relative h-64 md:h-72 lg:h-96 flex items-center justify-center">
             <ThirdSkeleton/>
 
         </CardStack>
